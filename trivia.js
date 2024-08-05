@@ -44,7 +44,7 @@ function pickContinent(){
     alert(continent);
 }
 
-pickContinent();
+// pickContinent();
 
 //connect clickable regions to if statements
 
