@@ -1,9 +1,9 @@
 <?php
-includes "includes/header.php";
+include "includes/header.php";
 ?>
 
     <h1>Trivia</h1>
     
 <?php
-includes "includes/footer.php";
+include "includes/footer.php";
 ?>
