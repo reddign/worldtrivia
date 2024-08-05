@@ -14,25 +14,25 @@ function getNumber(){
 
 function updateCont(){
     if (x == 1){
-        continent = "Africa"
+        continent = "africa"
     }
     else if (x == 2){
-        continent = "Antartica"
+        continent = "antartica"
     }
     else if (x == 3){
-        continent = "Asia"   
+        continent = "asia"   
     }
     else if (x == 4){
-        continent = "Australia"   
+        continent = "australia"   
     }
     else if (x == 5){
-        continent = "Europe"   
+        continent = "europe"   
     }
     else if (x == 6){
-        continent = "North America"   
+        continent = "northAmerica"   
     }
     else if (x == 7){
-        continent = "South America"   
+        continent = "southAmerica"   
     }
 }
 
@@ -45,3 +45,32 @@ function pickContinent(){
 }
 
 pickContinent();
+
+//connect clickable regions to if statements
+
+function clickRegion(area){
+    if (area == 'northAmerica' && continent == 'northAmerica'){
+        alert("correct!")
+    }
+    else if (area == 'southAmerica' && continent == 'southAmerica'){
+        alert("correct!")
+    }
+    else if (area == 'australia' && continent == 'australia'){
+        alert("correct!")
+    }
+    else if (area == 'antartica' && continent == 'antartica'){
+        alert("correct!")
+    }
+    else if (area == 'asia' && continent == 'asia'){
+        alert("correct!")
+    }
+    else if (area == 'europe' && continent == 'europe'){
+        alert("correct!")
+    }
+    else if (area == 'africa' && continent == 'africa'){
+        alert("correct!")
+    }
+
+}
+
+clickRegion(area);
