@@ -8,7 +8,7 @@
 <body>
 <div class="w3-top">
         <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-          <a href="index.php" class="w3-bar-item w3-button">World Facts</a>
+          <a href="index.php" class="w3-bar-item w3-button"><img src="images/Heading.png" height=40px style="border-style: none;"></a>
           <!-- Right-sided navbar links. Hide them on small screens -->
           <div class="w3-right w3-hide-small">
             <a href="#" class="w3-bar-item w3-button">About</a>
