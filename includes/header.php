@@ -6,3 +6,4 @@
     <link rel="stylesheet" href="../stylesheet.css">
 </head>
 <body>
+    <header><h1>WorldTrivia</h1></header>
