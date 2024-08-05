@@ -3,7 +3,7 @@ include "includes/header.php";
 ?>
 
     <h1>Trivia</h1>
-    
+    <link rel="stylesheet" href="../stylesheet.css">
     <img src="images/WorldMap.png" alt="world map" usemap="#worldmap">
 
 <map name="worldmap" id="worldmap" >
