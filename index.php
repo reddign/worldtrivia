@@ -2,7 +2,6 @@
 include "includes/header.php";
 ?>
 
-
 <img src="images/WorldMap.png" alt="world map" usemap="#worldmap">
     <map name="worldmap" id="worldmap" >
         <area coords="130, 20, 500, 200" href="region.php?region_id=21" shape="rect">
