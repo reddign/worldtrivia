@@ -1,8 +1,7 @@
 <?php
 include "includes/header.php";
 ?>
-<body>
-    <header><h1>Trivia</h1></header>
+
 
     <img src="images/WorldMap.png" alt="world map" usemap="#worldmap">
 
