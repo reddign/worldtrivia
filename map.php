@@ -3,7 +3,7 @@ include "includes/header.php";
 ?>
 <br><br><br><br>
 
-<script src="trivia.js">
+<script src="trivia.js"> </script>
 <img src="images/WorldMap.png" alt="world map" usemap="#worldmap">
     <map name="worldmap" id="worldmap" >
         <area coords="130, 20, 500, 200"  href="#" shape="rect">
