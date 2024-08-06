@@ -6,7 +6,7 @@ include "includes/header.php";
 <script src="trivia.js"> </script>
 <img src="images/WorldMap.png" alt="world map" usemap="#worldmap">
     <map name="worldMap" id="worldMap">
-            <area shape="rect" coords="170, 50, 420, 240" href="index.php" onclick="clickRegion('northAmerica')" > 
+            <area shape="rect" coords="170, 50, 420, 240" href="#" onclick="clickRegion('northAmerica')" > 
             <area shape="rect" coords="425, 20, 520, 80" href="#" onclick="clickRegion('northAmerica')">
             <area shape="rect" coords="300, 240, 450, 480" href="#" onclick="clickRegion('southAmerica')"> 
             <area shape="rect" coords="880, 320, 1060, 440" href="#" onclick="clickRegion('australia')"> 
