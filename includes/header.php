@@ -11,9 +11,9 @@
           <a href="index.php" class="w3-bar-item w3-button">World Trivia</a>
           <!-- Right-sided navbar links. Hide them on small screens -->
           <div class="w3-right w3-hide-small">
-            <a href="#" class="w3-bar-item w3-button">About</a>
             <a href="#" class="w3-bar-item w3-button">Menu</a>
-            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+            <a href="#" class="w3-bar-item w3-button">Guesses</a>
+            <a href="#contact" class="w3-bar-item w3-button">Coins</a>
           </div>
         </div>
       </div>
