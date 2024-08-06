@@ -15,7 +15,7 @@ include "includes/header.php";
             <area shape="rect" coords="580, 270, 680, 310" href="#" onclick="clickRegion('africa')">
             <area shape="rect" coords="675, 30, 950, 240" href="#" onclick="clickRegion('asia')">
             <area shape="rect" coords="480, 50, 674, 150" href="#" onclick="clickRegion('europe')">
-            <area shape="rect" coords="170, 500, 900, 500" href="#" onclick="clickRegion('antartica')">
+            <area shape="rect" coords="170, 500, 900, 580" href="#" onclick="clickRegion('antartica')">
         </map> 
 
 <?php
