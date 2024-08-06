@@ -3,21 +3,121 @@ include "includes/header.php";
 ?>
 <br><br><br><br>
 
-<script src="trivia.js"> </script>
-<img src="images/WorldMap.png" alt="world map" usemap="#worldmap">
-    <map name="worldMap" id="worldMap">
-            <area shape="rect" coords="170, 50, 420, 240" href="#" onclick="clickRegion('northAmerica')" > 
-            <area shape="rect" coords="425, 20, 520, 80" href="#" onclick="clickRegion('northAmerica')">
-            <area shape="rect" coords="300, 240, 450, 480" href="#" onclick="clickRegion('southAmerica')"> 
-            <area shape="rect" coords="880, 320, 1060, 440" href="#" onclick="clickRegion('australia')"> 
-            <area shape="rect" coords="500, 170, 650, 270" href="#" onclick="clickRegion('africa')">
-            <area shape="rect" coords="580, 320, 700, 410" href="#" onclick="clickRegion('africa')">
-            <area shape="rect" coords="580, 270, 680, 310" href="#" onclick="clickRegion('africa')">
-            <area shape="rect" coords="675, 30, 950, 240" href="#" onclick="clickRegion('asia')">
-            <area shape="rect" coords="480, 50, 674, 150" href="#" onclick="clickRegion('europe')">
-            <area shape="rect" coords="170, 500, 900, 580" href="#" onclick="clickRegion('antartica')">
-        </map> 
 
+<img src="images/WorldMap.png" alt="world map" usemap="#worldmap">
+
+<map name="worldmap" id="worldmap" >
+    <area coords="130, 20, 500, 200" href="#" shape="rect" onclick="clickRegion('northAmerica');">
+    <area coords="200, 200, 450, 450" href="#" shape="rect" onclick="clickRegion('southAmerica');">
+    <area coords="470, 150, 650, 420" href="#" shape="rect" onclick="clickRegion('africa');">
+    <area coords="670, 40, 920, 290" href="#" shape="rect" onclick="clickRegion('asia');">
+    <area coords="850, 300, 990,500" href="#" shape="rect" onclick="clickRegion('australia');">
+    <area coords="500, 15, 675, 150" href="#" shape="rect" onclick="clickRegion('europe');">
+</map>
+
+        <script src="trivia.js"> 
+            event.preventDefault();
+
+            let guesses = 3;
+let coins = 10;
+let continent = ""
+let x;
+let win = false;
+
+//get a random number between 1 and 7
+
+function getNumber(){
+    x = Math.floor(Math.random() * 7) + 1;
+    alert(x)
+}
+
+// allocate a continent to each number
+
+function updateCont(){
+    if (x == 1){
+        continent = "africa"
+    }
+    else if (x == 2){
+        continent = "antartica"
+    }
+    else if (x == 3){
+        continent = "asia"   
+    }
+    else if (x == 4){
+        continent = "australia"   
+    }
+    else if (x == 5){
+        continent = "europe"   
+    }
+    else if (x == 6){
+        continent = "northAmerica"   
+    }
+    else if (x == 7){
+        continent = "southAmerica"   
+    }
+}
+
+            function pickContinent(){
+    getNumber();
+    updateCont();
+    alert(continent);
+}
+
+pickContinent();
+
+            function clickRegion(area){
+    if (area == 'northAmerica' && continent == 'northAmerica'){
+        alert("correct!")
+        win = true
+    }
+    else if (area == 'southAmerica' && continent == 'southAmerica'){
+        alert("correct!")
+        win = true
+    }
+    else if (area == 'australia' && continent == 'australia'){
+        alert("correct!")
+        win = true
+    }
+    else if (area == 'antarctica' && continent == 'antarctica'){
+        alert("correct!")
+        win = true
+    }
+    else if (area == 'asia' && continent == 'asia'){
+        alert("correct!")
+        win = true
+    }
+    else if (area == 'europe' && continent == 'europe'){
+        alert("correct!")
+        win = true
+    }
+    else if (area == 'africa' && continent == 'africa'){
+        alert("correct!")
+        win = true
+    }
+    else{
+        alert("incorrect!")
+        win = false;
+        guesses -= 1;
+    }
+
+    if (win == true && guesses == 3){
+        coins += 5
+    }
+    else if (win == true && guesses == 2){
+        coins += 3
+    }
+    else if (win == true && guesses == 1){
+        coins += 2
+    }
+
+    alert(`guesses: ${guesses}`)
+    alert(`coins: ${coins}`)
+
+}
+
+
+clickRegion(area);
+        </script>
 <?php
 include "includes/footer.php";
 ?>
