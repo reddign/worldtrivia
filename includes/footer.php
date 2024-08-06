@@ -5,7 +5,7 @@ Copyright MCA 2024
 Ngan Bui,
 Camila Urena,
 Camille Do,
-Jenny Ward,Test
+Jenny Ward
 </h6>
 
 </div>
