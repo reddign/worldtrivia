@@ -13,6 +13,7 @@ include "includes/header.php";
     <area coords="670, 40, 920, 290" href="#" shape="rect" onclick="clickRegion('asia');">
     <area coords="850, 300, 990,500" href="#" shape="rect" onclick="clickRegion('australia');">
     <area coords="500, 15, 675, 150" href="#" shape="rect" onclick="clickRegion('europe');">
+    <area coords="130, 500, 990, 600" href="#" shape="rect" onclick="clickRegion('antartica');">
 </map>
 
         <script src="trivia.js"> 
