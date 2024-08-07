@@ -31,7 +31,11 @@ a::before {
 
 </style>
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+<img src="images/earth.png" alt="earth" width="400px">
+
+<br><br><br>
 
 <a href="map.php" >
     <img id="start" src="images/startbutton.png" alt="start" style="border-style: none;" width="200px">
