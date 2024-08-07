@@ -1,8 +1,9 @@
-let guesses = 3;
-let coins = 10;
-let continent = "";
-let x;
-let win = false;
+// let guesses = 3;
+// let coins = 10;
+// let continent = "";
+// let x;
+// let win = false;
+
 
 //hints 
 
@@ -33,7 +34,7 @@ let ausGeo = "This continent has roughly 30,000 kilometers of beaches."
 let naWildlife = "A unique animal from this region is the Axolotl."
 let saWildlife = "A unique animal from this region is the Pink Dolphin."
 let eurWildlife = "A unique animal from this region is the Iberian Lynx."
-let asiaWilflife = "A unique animal from this region is the Orangutan."
+let asiaWildlife = "A unique animal from this region is the Orangutan."
 let afrWildlife = "A unique animal from this region is the Bat-eared fox."
 let antWildlife = "A unique animal from this region is the Weddell Seal."
 let ausWildlife = "A unique animal from this region is the Cassowary."
@@ -50,7 +51,7 @@ let ausCountry = "A random country in this region is Kiribati"
 
 function getNumber(){
     x = Math.floor(Math.random() * 7) + 1;
-    alert(x)
+    //alert(x)
 }
 
 // allocate a continent to each number
@@ -60,7 +61,7 @@ function updateCont(){
         continent = "africa"
     }
     else if (x == 2){
-        continent = "antartica"
+        continent = "antarctica"
     }
     else if (x == 3){
         continent = "asia"   
@@ -82,9 +83,16 @@ function updateCont(){
 //do it all in one function :)
 
 function pickContinent(){
-    getNumber();
-    updateCont();
-    alert(continent);
+    if(continent==""){
+        getNumber();
+        updateCont();
+
+        //post that to the page include/setContinent.php
+        postContinentData();
+        console.log(continent);
+    }
+    console.log("Done picking continent as ",continent);
+    
 }
 
 pickContinent();
@@ -124,6 +132,7 @@ function clickRegion(area){
         alert("incorrect!")
         win = false;
         guesses -= 1;
+        postGuess();
     }
 
     if (win == true && guesses == 3){
@@ -136,8 +145,9 @@ function clickRegion(area){
         coins += 2
     }
 
-alert(`guesses: ${guesses}`)
-alert(`coins: ${coins}`)
+//alert(`guesses: ${guesses}`)
+//alert(`coins: ${coins}`)
+  postCoinHintData("","map");
 
 }
 
@@ -148,8 +158,7 @@ clickRegion(area);
 
 function inventionsHint(){
     if (coins > 1){
-        coins -= 2 
-        console.log(`coins: ${coins}`);
+        coins -= 2;
         if (continent == "northAmerica"){
             console.log(naInvention)
         }
@@ -171,12 +180,18 @@ function inventionsHint(){
         else if (continent == "antarctica"){
             console.log(antInvention)
         }
+        var button = document.getElementById('inventions');
+        button.disabled = true;
+        postCoinHintData("hintInv"); 
+        console.log(`coins: ${coins}`);
+
     }
 }
 
 function funFactHint(){
     if (coins > 1){
-        coins -= 2 
+        coins -= 2;
+          ; 
         console.log(`coins: ${coins}`);
         if (continent == "northAmerica"){
             console.log(naFF)
@@ -199,12 +214,16 @@ function funFactHint(){
         else if (continent == "antarctica"){
             console.log(antFF)
         }
+        var button = document.getElementById('funFact');
+        button.disabled = true;
+        postCoinHintData("hintFF");
     }
 }
 
 function geographyHint(){
     if (coins > 2){
-        coins -= 3 
+        coins -= 3;
+          
         console.log(`coins: ${coins}`);
         if (continent == "northAmerica"){
             console.log(naGeo)
@@ -227,12 +246,16 @@ function geographyHint(){
         else if (continent == "antarctica"){
             console.log(antGeo)
         }
+        var button = document.getElementById('geography');
+        button.disabled = true;
+        postCoinHintData("hintGeo"); 
     }
 }
 
 function wildlifeHint(){
     if (coins > 3){
-        coins -= 4 
+        coins -= 4;
+          ; 
         console.log(`coins: ${coins}`);
         if (continent == "northAmerica"){
             console.log(naWildlife)
@@ -255,12 +278,16 @@ function wildlifeHint(){
         else if (continent == "antarctica"){
             console.log(antWildlife)
         }
+        var button = document.getElementById('uniqueWildlife');
+        button.disabled = true;
+        postCoinHintData("hintWildlife"); 
     }
 }
 
 function countryHint(){
-    if (coins > 3){
-        coins -= 4 
+    if (coins > 4){
+        coins -= 5;
+          ;
         console.log(`coins: ${coins}`);
         if (continent == "northAmerica"){
             console.log(naCountry)
@@ -281,7 +308,23 @@ function countryHint(){
             console.log(ausCountry)
         }
         else if (continent == "antarctica"){
-            console.log(antCiuntry)
+            console.log(antCountry)
         }
+        var button = document.getElementById('country');
+        button.disabled = true;
+        postCoinHintData("hintCountry"); 
     }
+}
+
+function postContinentData(){
+    window.location = "includes/setContinent.php?continent="+continent;
+
+}
+function postCoinHintData(hintName,page){
+   
+    window.location = "includes/setCoins.php?coins="+coins+"&hint="+hintName;
+
+}
+function postGuess(){
+    window.location = "includes/setGuesses.php?guesses="+guesses;
 }

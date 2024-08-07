@@ -4,7 +4,26 @@ include "includes/header.php";
 <br><br><br><br>
 
 
-<img src="images/WorldMap.png" alt="world map" usemap="#worldmap">
+        <h1>World Trivia</h1>
+       
+        <script src="trivia.js"></script>
+
+        <img src="images/WorldMap.png" usemap="#worldMap" >
+        <map name="worldMap" id="worldMap">
+            <area shape="rect" coords="170, 50, 420, 240" href=# onclick="clickRegion('northAmerica')"> 
+            <area shape="rect" coords="425, 20, 520, 80" href=# onclick="clickRegion('northAmerica')">
+            <area shape="rect" coords="300, 240, 450, 480" href=# onclick="clickRegion('southAmerica')"> 
+            <area shape="rect" coords="880, 320, 1060, 440" href=# onclick="clickRegion('australia')"> 
+            <area shape="rect" coords="500, 170, 650, 270" href=# onclick="clickRegion('africa')">
+            <area shape="rect" coords="580, 320, 700, 410" href=# onclick="clickRegion('africa')">
+            <area shape="rect" coords="580, 270, 680, 310" href=# onclick="clickRegion('africa')">
+            <area shape="rect" coords="675, 30, 950, 240" href=# onclick="clickRegion('asia')">
+            <area shape="rect" coords="480, 50, 674, 150" href=# onclick="clickRegion('europe')">
+            <area shape="rect" coords="170, 500, 900, 580" href=# onclick="clickRegion('antarctica')">
+        </map> 
+        <h1 id="hintSpace">Hints</h1>
+    </body>
+</html>
 
 <map name="worldmap" id="worldmap" >
     <area coords="130, 20, 500, 200" href="#" shape="rect" onclick="clickRegion('northAmerica');">
@@ -19,5 +38,7 @@ include "includes/header.php";
         <script src="trivia.js"> 
         </script>
 <?php
+require "includes/hintDisplay.php";
+
 include "includes/footer.php";
 ?>
