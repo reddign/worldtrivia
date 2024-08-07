@@ -8,7 +8,7 @@ include "includes/header.php";
                 width: 100px;
             } */
 
-            a {
+a {
   position: relative;
   text-decoration: none;
 }
