@@ -3,10 +3,32 @@ include "includes/header.php";
 ?>
 
 <style>
-    a:hover{
+    /* a:hover{
                 background-color: lightblue;
                 width: 100px;
-            }
+            } */
+
+            a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: green;
+   transition: width 0.3s ease-out;
+  z-index: -1;
+} 
+
+ a:hover::before {
+  width: 100%;
+} 
+
 </style>
 
 <br><br><br><br><br><br><br><br><br><br>
