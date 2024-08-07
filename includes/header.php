@@ -11,9 +11,9 @@
           <a href="index.php" class="w3-bar-item w3-button"><img src="images/Heading.png" height=50px style="border-style: none;"></a>
           <!-- Right-sided navbar links. Hide them on small screens -->
           <div class="w3-right w3-hide-small">
-            <a href="#" class="w3-bar-item w3-button">Store</a>
-            <a href="#" class="w3-bar-item w3-button">Guesses</a>
-            <a href="#contact" class="w3-bar-item w3-button">Coins</a>
+            <a href="store.php" class="w3-bar-item w3-button">Store</a>
+            <p class="w3-bar-item w3-button">Guesses</p>
+            <p class="w3-bar-item w3-button">Coins</p>
           </div>
         </div>
       </div>
