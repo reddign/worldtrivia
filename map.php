@@ -8,6 +8,9 @@ include "includes/header.php";
        
         <script src="trivia.js"></script>
 
+        <div style="float: left;">
+
+        
         <img src="images/WorldMap.png" usemap="#worldMap" >
         <map name="worldMap" id="worldMap">
             <area shape="rect" coords="170, 50, 420, 240" href=# onclick="clickRegion('northAmerica')"> 
@@ -21,7 +24,10 @@ include "includes/header.php";
             <area shape="rect" coords="480, 50, 674, 150" href=# onclick="clickRegion('europe')">
             <area shape="rect" coords="170, 500, 900, 580" href=# onclick="clickRegion('antarctica')">
         </map> 
+        </div>
+        
         <h1 id="hintSpace">Hints</h1>
+        
     </body>
 </html>
 
@@ -39,6 +45,6 @@ include "includes/header.php";
         </script>
 <?php
 require "includes/hintDisplay.php";
-
+echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
 include "includes/footer.php";
 ?>
