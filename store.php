@@ -16,5 +16,6 @@ include "includes/header.php";
     <button id="uniqueWildlife" onclick="wildlifeHint()" <?PHP if($hintWildlife) echo "disabled"; ?>  >4 Coins</button><br><br>
     Country 
     <button id="country" onclick="countryHint()" <?PHP if($hintCountry) echo "disabled"; ?>  >5 Coins</button><br><br>
+
 </body>
 </html>

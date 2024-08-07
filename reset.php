@@ -5,6 +5,6 @@ $_SESSION["coins"]="";
 $_SESSION["guesses"]="";
 $_SESSION["continent"]="";
 session_destroy();
-header("location:start.php");
+header("location:index.php");
 
 ?>
