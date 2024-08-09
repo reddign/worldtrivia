@@ -15,7 +15,7 @@
 
 <div class="w3-top">
         <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-          <a href="start.php" class="w3-bar-item w3-button"><img src="images/Heading.png" height=50px style="border-style: none;"></a>
+          <a href="index.php" class="w3-bar-item w3-button"><img src="images/Heading.png" height=50px style="border-style: none;"></a>
           <!-- Right-sided navbar links. Hide them on small screens -->
           <div class="w3-right w3-hide-small">
             <a href="store.php" class="w3-bar-item w3-button">Store</a>
