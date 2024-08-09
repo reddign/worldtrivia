@@ -101,39 +101,41 @@ pickContinent();
 
 function clickRegion(area){
     if (area == 'northAmerica' && continent == 'northAmerica'){
-        alert("correct!")
+        alert("Correct!")
         win = true
     }
     else if (area == 'southAmerica' && continent == 'southAmerica'){
-        alert("correct!")
+        alert("Correct!")
         win = true
     }
     else if (area == 'australia' && continent == 'australia'){
-        alert("correct!")
+        alert("Correct!")
         win = true
     }
     else if (area == 'antarctica' && continent == 'antarctica'){
-        alert("correct!")
+        alert("Correct!")
         win = true
     }
     else if (area == 'asia' && continent == 'asia'){
-        alert("correct!")
+        alert("Correct!")
         win = true
     }
     else if (area == 'europe' && continent == 'europe'){
-        alert("correct!")
+        alert("Correct!")
         win = true
     }
     else if (area == 'africa' && continent == 'africa'){
-        alert("correct!")
+        alert("Correct!")
         win = true
     }
     else{
-        alert("incorrect!")
+        alert("Incorrect! Try again or buy another hint.")
         win = false;
-        guesses -= 1;
+        if (guesses > 0){
+            guesses -= 1;
         postGuess();
     }
+}
 
     if (win == true && guesses == 3){
         coins += 5
@@ -315,6 +317,14 @@ function countryHint(){
         postCoinHintData("hintCountry"); 
     }
 }
+
+function endGame(){
+    if (guesses == 0){
+        alert("You lost! :( Click reset to play again.")
+    }
+}
+
+endGame()
 
 function postContinentData(){
     window.location = "includes/setContinent.php?continent="+continent;
